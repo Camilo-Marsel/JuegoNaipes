@@ -42,7 +42,13 @@ public class Carta {
             return Pinta.DIAMANTE;
         }
     }
-    
-    
+
+    public NombreCarta getNombre() {
+        int residuo = indice % 13;
+        if (residuo == 0) {
+            residuo = 13;
+        }
+        return NombreCarta.values()[residuo - 1];
+    }
 
 }
