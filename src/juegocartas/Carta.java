@@ -12,7 +12,13 @@ public class Carta {
     public Carta(Random r) {
         indice = r.nextInt(52) + 1;
     }
-
+    public Carta(int r) {
+        indice = r;
+    }
+    public int Indice(){
+        return indice;
+    }
+    
     public void mostrar(JPanel pnl, int x, int y) {
         //obtener el nombre del archivo
         String nombreImagen = "/imagenes/CARTA" + String.valueOf(indice) + ".JPG";
@@ -50,5 +56,7 @@ public class Carta {
         }
         return NombreCarta.values()[residuo - 1];
     }
+    
+    
 
 }
