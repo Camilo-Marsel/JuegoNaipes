@@ -59,14 +59,14 @@ public class FrmJuego extends javax.swing.JFrame {
         pnlJugador1.setLayout(pnlJugador1Layout);
         pnlJugador1Layout.setHorizontalGroup(
             pnlJugador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 438, Short.MAX_VALUE)
+            .addGap(0, 683, Short.MAX_VALUE)
         );
         pnlJugador1Layout.setVerticalGroup(
             pnlJugador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
+            .addGap(0, 314, Short.MAX_VALUE)
         );
 
-        tpJugadores.addTab("Martín Estrada Contreras", pnlJugador1);
+        tpJugadores.addTab("Camilo Marsel", pnlJugador1);
 
         pnlJugador2.setBackground(new java.awt.Color(102, 255, 204));
 
@@ -74,14 +74,14 @@ public class FrmJuego extends javax.swing.JFrame {
         pnlJugador2.setLayout(pnlJugador2Layout);
         pnlJugador2Layout.setHorizontalGroup(
             pnlJugador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 438, Short.MAX_VALUE)
+            .addGap(0, 683, Short.MAX_VALUE)
         );
         pnlJugador2Layout.setVerticalGroup(
             pnlJugador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
+            .addGap(0, 314, Short.MAX_VALUE)
         );
 
-        tpJugadores.addTab("Raúl Vidal", pnlJugador2);
+        tpJugadores.addTab("Bot NPC", pnlJugador2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -123,13 +123,14 @@ public class FrmJuego extends javax.swing.JFrame {
         String mensaje = "";
         switch (pestaña) {
             case 0:
-                mensaje=jugador1.getGrupos();
+                mensaje=jugador1.getGrupos() +  "el puntaje fue: "+ jugador1.getConteo();
                 break;
             case 1:
-                mensaje=jugador2.getGrupos();
+                mensaje=jugador2.getGrupos()+  "el puntaje fue: "+ jugador2.getConteo();
                 break;
         }
         JOptionPane.showMessageDialog(null, mensaje);
+        
     }//GEN-LAST:event_btnVerificarActionPerformed
 
     /**
